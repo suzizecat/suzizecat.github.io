@@ -10,6 +10,8 @@ Welcome to Diplomat Documentation's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   vscode/presentation
+   lsp/presentation
 
 
 Indices and tables
