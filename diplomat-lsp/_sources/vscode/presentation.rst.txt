@@ -10,4 +10,12 @@ It features:
  * Jump to definition/reference across files
  * Syntax coloration
  * Rename symbol
- * Assisted instanciation of any module found in the workspace 
+ * Assisted instanciation of any module found in the workspace
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Features:
+
+   development
+   sim_debug
+

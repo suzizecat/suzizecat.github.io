@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Custom Language Server commands" href="custom_lsp.html" /><link rel="prev" title="Diplomat Language Server" href="presentation.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Diplomat Language Server" href="../lsp/presentation.html" /><link rel="prev" title="Development features" href="development.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.07.18 -->
-        <title>Supported standard LSP commands - Diplomat LSP 0.0.6 documentation</title>
+        <title>Simulation debug features - Diplomat LSP 0.0.6 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=613ab9ff" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
@@ -200,14 +200,14 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../vscode/presentation.html">Diplomat VSCode extension</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Diplomat VSCode extension</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../vscode/development.html">Development features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vscode/sim_debug.html">Simulation debug features</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="presentation.html">Diplomat VSCode extension</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Diplomat VSCode extension</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="development.html">Development features</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Simulation debug features</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="presentation.html">Diplomat Language Server</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Diplomat Language Server</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Supported standard LSP commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom_lsp.html">Custom Language Server commands</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lsp/presentation.html">Diplomat Language Server</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Diplomat Language Server</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lsp/standard_lsp.html">Supported standard LSP commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lsp/custom_lsp.html">Custom Language Server commands</a></li>
 </ul>
 </li>
 </ul>
@@ -230,7 +230,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/lsp/standard_lsp.rst.txt" title="View this page">
+  <a class="muted-link" href="../_sources/vscode/sim_debug.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -250,69 +250,56 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="supported-standard-lsp-commands">
-<h1>Supported standard LSP commands<a class="headerlink" href="#supported-standard-lsp-commands" title="Permalink to this heading">¶</a></h1>
-<p>The commands provided here are standard commands from the <a class="reference external" href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol specification</a>
-The server will reply accordingly to the standard to the requests listed bellow.
-Other request will be ignored.</p>
-<p>As of today, the language server implements the standard version 3.17</p>
-<section id="initialize-request">
-<h2><code class="docutils literal notranslate"><span class="pre">initialize</span></code> request<a class="headerlink" href="#initialize-request" title="Permalink to this heading">¶</a></h2>
-<p>See <a class="reference external" href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#initialize">the LSP specification for initialize</a></p>
-</section>
-<section id="initialized-notification">
-<h2><code class="docutils literal notranslate"><span class="pre">initialized</span></code> notification<a class="headerlink" href="#initialized-notification" title="Permalink to this heading">¶</a></h2>
-<p>See <a class="reference external" href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#initialized">the LSP specification for initialized</a></p>
-<p>Upon receiving this notification, the language server will request some configurations if the <code class="docutils literal notranslate"><span class="pre">workspace/configuration</span></code> request is
-supported by the client.</p>
-</section>
-<section id="exit-notification">
-<h2><code class="docutils literal notranslate"><span class="pre">exit</span></code> notification<a class="headerlink" href="#exit-notification" title="Permalink to this heading">¶</a></h2>
-<p>See <a class="reference external" href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#exit">the LSP specification for exit</a></p>
-</section>
-<section id="shutdown-request">
-<h2><code class="docutils literal notranslate"><span class="pre">shutdown</span></code> request<a class="headerlink" href="#shutdown-request" title="Permalink to this heading">¶</a></h2>
-<p>See <a class="reference external" href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#shutdown">the LSP specification for shutdown</a></p>
-</section>
-<section id="textdocument-didopen-notification">
-<h2><code class="docutils literal notranslate"><span class="pre">textDocument/didOpen</span></code> notification<a class="headerlink" href="#textdocument-didopen-notification" title="Permalink to this heading">¶</a></h2>
-</section>
-<section id="textdocument-didsave-notification">
-<h2><code class="docutils literal notranslate"><span class="pre">textDocument/didSave</span></code> notification<a class="headerlink" href="#textdocument-didsave-notification" title="Permalink to this heading">¶</a></h2>
-<p>See <a class="reference external" href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_didSave">the LSP specification for textDocument/didSave</a></p>
-<p>Upon receiving this notification, the language server will re-run a workspace analysis and refresh all diagnostics.</p>
-</section>
-<section id="textdocument-definition-request">
-<h2><code class="docutils literal notranslate"><span class="pre">textDocument/definition</span></code> request<a class="headerlink" href="#textdocument-definition-request" title="Permalink to this heading">¶</a></h2>
-</section>
-<section id="textdocument-references-request">
-<h2><code class="docutils literal notranslate"><span class="pre">textDocument/references</span></code> request<a class="headerlink" href="#textdocument-references-request" title="Permalink to this heading">¶</a></h2>
-</section>
-<section id="textdocument-rename-request">
-<h2><code class="docutils literal notranslate"><span class="pre">textDocument/rename</span></code> request<a class="headerlink" href="#textdocument-rename-request" title="Permalink to this heading">¶</a></h2>
-</section>
-<section id="textdocument-formatting-request">
-<h2><code class="docutils literal notranslate"><span class="pre">textDocument/formatting</span></code> request<a class="headerlink" href="#textdocument-formatting-request" title="Permalink to this heading">¶</a></h2>
-<p>Invoke the internal formatter.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is under development and the result may not be of great quality.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The range formating is not available and the file shall be saved before running this command.</p>
+          <section id="simulation-debug-features">
+<h1>Simulation debug features<a class="headerlink" href="#simulation-debug-features" title="Permalink to this heading">¶</a></h1>
+<section id="open-waveform-in-viewer">
+<h2>Open waveform in viewer<a class="headerlink" href="#open-waveform-in-viewer" title="Permalink to this heading">¶</a></h2>
+<p>For all supported waveform type, Diplomat provides a shortcut to directly open the waveform in the appropriate external viewer.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/open_wave.png"><img alt="../_images/open_wave.png" src="../_images/open_wave.png" style="width: 342.75px; height: 457.5px;" /></a>
+<figcaption>
+<p><span class="caption-text">Open waveform menu</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of today, only GTKWave 3 is supported</p>
 </div>
 </section>
-<section id="workspace-didchangeworkspacefolders-notification">
-<h2><code class="docutils literal notranslate"><span class="pre">workspace/didChangeWorkspaceFolders</span></code> notification<a class="headerlink" href="#workspace-didchangeworkspacefolders-notification" title="Permalink to this heading">¶</a></h2>
+<section id="hierarchy-explorer">
+<h2>Hierarchy explorer<a class="headerlink" href="#hierarchy-explorer" title="Permalink to this heading">¶</a></h2>
+<p>Once the workspace has been properly analyzed, the hierarchy explorer will show the hierarchy tree of the workspace.
+If no top-level file is selected, all potential top-level modules will be shown in the tree.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/hier_explorer.png" src="../_images/hier_explorer.png" />
+<figcaption>
+<p><span class="caption-text">Hierarchy explorer view</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Selecting an element in the hierarchy explorer will open the appropriate source file and select the instance for the <a class="reference internal" href="#inline-value-display"><span class="std std-ref">Inline value display</span></a>, if enabled.</p>
 </section>
-<section id="textdocument-publishdiagnostics-notification">
-<h2><code class="docutils literal notranslate"><span class="pre">textDocument/publishDiagnostics</span></code> notification<a class="headerlink" href="#textdocument-publishdiagnostics-notification" title="Permalink to this heading">¶</a></h2>
-<p>See <a class="reference external" href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_publishDiagnostics">the LSP specification for textDocument/publishDiagnostics</a></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">textDocument/publishDiagnostics</span></code> notification is actually sent by the server in order to provide the diagnostic results after a successful workspace analysis</p>
-</section>
-<section id="workspace-executecommand-notification">
-<h2><code class="docutils literal notranslate"><span class="pre">workspace/executeCommand</span></code> notification<a class="headerlink" href="#workspace-executecommand-notification" title="Permalink to this heading">¶</a></h2>
+<section id="inline-value-display">
+<span id="id1"></span><h2>Inline value display<a class="headerlink" href="#inline-value-display" title="Permalink to this heading">¶</a></h2>
+<p>Diplomat Client is able, under some conditions, to display the value from a simulation within the source code.
+This is done when:</p>
+<ol class="arabic simple">
+<li><p>A simulation which top-level module matches the workspace top-level is opened through Diplomat Client action.</p></li>
+<li><p>A hierarchy level is selected in the Hierarchy Explorer</p></li>
+</ol>
+<p>Once those conditions are met, the editor will display the simulation values for the selected time directly in the editor.
+Changing the position of the marker will update the values in the editor.
+The traces does not need to be displayed in the viewer for the values to be retrieved.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/inline_values.png" src="../_images/inline_values.png" />
+<figcaption>
+<p><span class="caption-text">Editor with inline value display enabled</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As the value lookup is only meaninful in the context of the hierarchy,
+please navigate your design using the Hierarchy explorer while usin gthe inline value display.</p>
+</div>
 </section>
 </section>
 
@@ -321,23 +308,23 @@ supported by the client.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="custom_lsp.html">
+          <a class="next-page" href="../lsp/presentation.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Custom Language Server commands</div>
+                <div class="title">Diplomat Language Server</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="presentation.html">
+          <a class="prev-page" href="development.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Diplomat Language Server</div>
+                <div class="title">Development features</div>
                 
               </div>
             </a>
@@ -371,20 +358,10 @@ supported by the client.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Supported standard LSP commands</a><ul>
-<li><a class="reference internal" href="#initialize-request"><code class="docutils literal notranslate"><span class="pre">initialize</span></code> request</a></li>
-<li><a class="reference internal" href="#initialized-notification"><code class="docutils literal notranslate"><span class="pre">initialized</span></code> notification</a></li>
-<li><a class="reference internal" href="#exit-notification"><code class="docutils literal notranslate"><span class="pre">exit</span></code> notification</a></li>
-<li><a class="reference internal" href="#shutdown-request"><code class="docutils literal notranslate"><span class="pre">shutdown</span></code> request</a></li>
-<li><a class="reference internal" href="#textdocument-didopen-notification"><code class="docutils literal notranslate"><span class="pre">textDocument/didOpen</span></code> notification</a></li>
-<li><a class="reference internal" href="#textdocument-didsave-notification"><code class="docutils literal notranslate"><span class="pre">textDocument/didSave</span></code> notification</a></li>
-<li><a class="reference internal" href="#textdocument-definition-request"><code class="docutils literal notranslate"><span class="pre">textDocument/definition</span></code> request</a></li>
-<li><a class="reference internal" href="#textdocument-references-request"><code class="docutils literal notranslate"><span class="pre">textDocument/references</span></code> request</a></li>
-<li><a class="reference internal" href="#textdocument-rename-request"><code class="docutils literal notranslate"><span class="pre">textDocument/rename</span></code> request</a></li>
-<li><a class="reference internal" href="#textdocument-formatting-request"><code class="docutils literal notranslate"><span class="pre">textDocument/formatting</span></code> request</a></li>
-<li><a class="reference internal" href="#workspace-didchangeworkspacefolders-notification"><code class="docutils literal notranslate"><span class="pre">workspace/didChangeWorkspaceFolders</span></code> notification</a></li>
-<li><a class="reference internal" href="#textdocument-publishdiagnostics-notification"><code class="docutils literal notranslate"><span class="pre">textDocument/publishDiagnostics</span></code> notification</a></li>
-<li><a class="reference internal" href="#workspace-executecommand-notification"><code class="docutils literal notranslate"><span class="pre">workspace/executeCommand</span></code> notification</a></li>
+<li><a class="reference internal" href="#">Simulation debug features</a><ul>
+<li><a class="reference internal" href="#open-waveform-in-viewer">Open waveform in viewer</a></li>
+<li><a class="reference internal" href="#hierarchy-explorer">Hierarchy explorer</a></li>
+<li><a class="reference internal" href="#inline-value-display">Inline value display</a></li>
 </ul>
 </li>
 </ul>
