@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Simulation debug features" href="sim_debug.html" /><link rel="prev" title="Diplomat VSCode extension" href="presentation.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Simulation debug features" href="sim_debug.html" /><link rel="prev" title="Diplomat VS Code extension" href="presentation.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.07.18 -->
         <title>Development features - Diplomat LSP 0.0.6 documentation</title>
@@ -200,7 +200,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="presentation.html">Diplomat VSCode extension</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Diplomat VSCode extension</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="presentation.html">Diplomat VS Code extension</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Diplomat VS Code extension</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Development features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sim_debug.html">Simulation debug features</a></li>
 </ul>
@@ -258,7 +258,7 @@
 It allows a management in C++ and offer great performances.</p>
 <p>Slang also provides a great support of SystemVerilog syntax, and not only Verilog.
 The supported language features are listed <a class="reference external" href="https://sv-lang.com/language-support.html">in the slang documentation</a>.</p>
-<p>The errors and warnings reported by slang will be returned to the editor and shown with squiggle lines in the editor and in the <em>Problems</em> view of VSCode.</p>
+<p>The errors and warnings reported by slang will be returned to the editor and shown with squiggle lines in the editor and in the <em>Problems</em> view of VS Code.</p>
 <figure class="align-center" id="id1">
 <img alt="../_images/error_reporting.png" src="../_images/error_reporting.png" />
 <figcaption>
@@ -283,6 +283,45 @@ Particularly annoying when working with a library of components and not really r
 Thus effectively ommiting diagnostics from file that are not used in the design.</p>
 </div>
 </section>
+<section id="code-navigation">
+<h2>Code navigation<a class="headerlink" href="#code-navigation" title="Permalink to this heading">¶</a></h2>
+<p>Using VS Code UI and Diplomat Language Server, the extension provides the <em>Go to definition</em>, <em>Go to reference</em> and <em>Find all references</em> features in the editor.
+These functions will allow to:</p>
+<ul class="simple">
+<li><p>Go from a variable (net, parameter…) to its declaration statement (<em>Go to definition</em>)</p></li>
+<li><p>Go from a variable declaration to its reference if only one reference is found (<em>Go to reference</em>).</p></li>
+<li><p>Show all references of a given variable (<em>Find all references</em>)</p></li>
+</ul>
+<p>Those actions are performed either through right-click menu in the editor, or by <code class="docutils literal notranslate"><span class="pre">Ctrl+Click</span></code> on any variable name in the editor.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl+Click</span></code> on a reference will jump to its declaration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl+Click</span></code> on a definition will jump to its reference (if only one exists) or lookup all the references.</p></li>
+<li><p>This feature works across files and on module ports.</p></li>
+</ul>
+</div>
+</section>
+<section id="symbol-renaming">
+<h2>Symbol renaming<a class="headerlink" href="#symbol-renaming" title="Permalink to this heading">¶</a></h2>
+<p>Using VS Code UI, the extension is able to performs symbol renaming.
+In editor, select a net and hit <code class="docutils literal notranslate"><span class="pre">F2</span></code> to trigger this feature.
+All reference and the definition of the symbol will be renamed.</p>
+<p>This is <strong>not</strong> a “Search and replace” function, as the lookup is done on symbols extracted from the elaborated design, while being aware of the context.
+Therefore, renaming a net in a module will not affect nets from another module.
+However, renaming a port will also affect the port name in all module instanctiations.</p>
+</section>
+<section id="module-instanciaton">
+<h2>Module instanciaton<a class="headerlink" href="#module-instanciaton" title="Permalink to this heading">¶</a></h2>
+<p>Diplomat client povide an “Instanciate module” function, directly from the command palette.
+This is invoked by using <code class="docutils literal notranslate"><span class="pre">Ctrl+P</span> <span class="pre">&gt;</span> <span class="pre">Instanciate</span> <span class="pre">Module</span></code>.
+VS Code will then present a list of modules detected across the workspace, that may be instanciated.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On large workspaces, there  might be few seconds between the command invocation and the selector popping up.</p>
+</div>
+<p>Selecting a module in the list will generate the instanciation statement where the editing cursor is located.</p>
+</section>
 </section>
 
         </article>
@@ -306,7 +345,7 @@ Thus effectively ommiting diagnostics from file that are not used in the design.
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Diplomat VSCode extension</div>
+                <div class="title">Diplomat VS Code extension</div>
                 
               </div>
             </a>
@@ -342,6 +381,9 @@ Thus effectively ommiting diagnostics from file that are not used in the design.
             <ul>
 <li><a class="reference internal" href="#">Development features</a><ul>
 <li><a class="reference internal" href="#code-analysis">Code analysis</a></li>
+<li><a class="reference internal" href="#code-navigation">Code navigation</a></li>
+<li><a class="reference internal" href="#symbol-renaming">Symbol renaming</a></li>
+<li><a class="reference internal" href="#module-instanciaton">Module instanciaton</a></li>
 </ul>
 </li>
 </ul>
