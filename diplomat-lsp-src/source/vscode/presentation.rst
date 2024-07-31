@@ -1,7 +1,7 @@
-Diplomat VSCode extension
-=========================
+Diplomat VS Code extension
+============================
 
-The Diplomat VSCode extension (*Diplomat Client*, sometimes refered as *Diplomat Host*)
+The Diplomat VS Code extension (*Diplomat Client*, sometimes refered as *Diplomat Host*)
 is the provided client for interfacing with Diplomat Server.
 
 It features:
