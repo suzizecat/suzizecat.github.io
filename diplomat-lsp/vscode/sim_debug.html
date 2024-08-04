@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Diplomat Language Server" href="../lsp/presentation.html" /><link rel="prev" title="Development features" href="development.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Supported standard LSP commands" href="../lsp/standard_lsp.html" /><link rel="prev" title="Development features" href="development.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.07.18 -->
-        <title>Simulation debug features - Diplomat LSP 0.0.6 documentation</title>
+        <title>Simulation debug features - Diplomat 0.1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=613ab9ff" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Diplomat LSP 0.0.6 documentation</div></a>
+      <a href="../index.html"><div class="brand">Diplomat 0.1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -190,7 +190,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">Diplomat LSP 0.0.6 documentation</span>
+  <span class="sidebar-brand-text">Diplomat 0.1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -198,18 +198,20 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/setup.html">Setup Diplomat</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VS Code extension</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="presentation.html">Diplomat VS Code extension</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Diplomat VS Code extension</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="development.html">Development features</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Simulation debug features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development features</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Simulation debug features</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../lsp/presentation.html">Diplomat Language Server</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Diplomat Language Server</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lsp/standard_lsp.html">Supported standard LSP commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lsp/custom_lsp.html">Custom Language Server commands</a></li>
-</ul>
-</li>
+<p class="caption" role="heading"><span class="caption-text">Language server</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lsp/standard_lsp.html">Supported standard LSP commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lsp/custom_lsp.html">Custom Language Server commands</a></li>
 </ul>
 
 </div>
@@ -255,10 +257,16 @@
 <section id="open-waveform-in-viewer">
 <h2>Open waveform in viewer<a class="headerlink" href="#open-waveform-in-viewer" title="Permalink to this heading">¶</a></h2>
 <p>For all supported waveform type, Diplomat provides a shortcut to directly open the waveform in the appropriate external viewer.</p>
-<figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/open_wave.png"><img alt="../_images/open_wave.png" src="../_images/open_wave.png" style="width: 342.75px; height: 457.5px;" /></a>
+<figure class="only-dark align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/open_wave_dark.png"><img alt="../_images/open_wave_dark.png" src="../_images/open_wave_dark.png" style="width: 384.0px; height: 432.75px;" /></a>
 <figcaption>
 <p><span class="caption-text">Open waveform menu</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="only-light align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/open_wave_light.png"><img alt="../_images/open_wave_light.png" src="../_images/open_wave_light.png" style="width: 384.0px; height: 432.75px;" /></a>
+<figcaption>
+<p><span class="caption-text">Open waveform menu</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -270,10 +278,16 @@
 <h2>Hierarchy explorer<a class="headerlink" href="#hierarchy-explorer" title="Permalink to this heading">¶</a></h2>
 <p>Once the workspace has been properly analyzed, the hierarchy explorer will show the hierarchy tree of the workspace.
 If no top-level file is selected, all potential top-level modules will be shown in the tree.</p>
-<figure class="align-center" id="id3">
-<img alt="../_images/hier_explorer.png" src="../_images/hier_explorer.png" />
+<figure class="only-dark align-center" id="id4">
+<img alt="../_images/hier_explorer_dark.png" src="../_images/hier_explorer_dark.png" />
 <figcaption>
-<p><span class="caption-text">Hierarchy explorer view</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Hierarchy explorer view</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="only-light align-center" id="id5">
+<img alt="../_images/hier_explorer_light.png" src="../_images/hier_explorer_light.png" />
+<figcaption>
+<p><span class="caption-text">Hierarchy explorer view</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Selecting an element in the hierarchy explorer will open the appropriate source file and select the instance for the <a class="reference internal" href="#inline-value-display"><span class="std std-ref">Inline value display</span></a>, if enabled.</p>
@@ -289,10 +303,16 @@ This is done when:</p>
 <p>Once those conditions are met, the editor will display the simulation values for the selected time directly in the editor.
 Changing the position of the marker will update the values in the editor.
 The traces does not need to be displayed in the viewer for the values to be retrieved.</p>
-<figure class="align-center" id="id4">
-<img alt="../_images/inline_values.png" src="../_images/inline_values.png" />
+<figure class="only-dark align-center" id="id6">
+<img alt="../_images/inline_values_dark.png" src="../_images/inline_values_dark.png" />
 <figcaption>
-<p><span class="caption-text">Editor with inline value display enabled</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Editor with inline value display enabled</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="only-light align-center" id="id7">
+<img alt="../_images/inline_values_light.png" src="../_images/inline_values_light.png" />
+<figcaption>
+<p><span class="caption-text">Editor with inline value display enabled</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -308,12 +328,12 @@ please navigate your design using the Hierarchy explorer while usin gthe inline 
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../lsp/presentation.html">
+          <a class="next-page" href="../lsp/standard_lsp.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Diplomat Language Server</div>
+                <div class="title">Supported standard LSP commands</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -373,7 +393,7 @@ please navigate your design using the Hierarchy explorer while usin gthe inline 
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=3dadcae2"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=87f11076"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>

@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Supported standard LSP commands" href="standard_lsp.html" /><link rel="prev" title="Simulation debug features" href="../vscode/sim_debug.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Development features" href="../vscode/development.html" /><link rel="prev" title="Introduction" href="intro.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.07.18 -->
-        <title>Diplomat Language Server - Diplomat LSP 0.0.6 documentation</title>
+        <title>Setup Diplomat - Diplomat 0.1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=613ab9ff" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Diplomat LSP 0.0.6 documentation</div></a>
+      <a href="../index.html"><div class="brand">Diplomat 0.1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -178,7 +178,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -190,7 +190,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">Diplomat LSP 0.0.6 documentation</span>
+  <span class="sidebar-brand-text">Diplomat 0.1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -198,18 +198,20 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../vscode/presentation.html">Diplomat VS Code extension</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Diplomat VS Code extension</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../vscode/development.html">Development features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vscode/sim_debug.html">Simulation debug features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Setup Diplomat</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Diplomat Language Server</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Diplomat Language Server</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html">Supported standard LSP commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom_lsp.html">Custom Language Server commands</a></li>
+<p class="caption" role="heading"><span class="caption-text">VS Code extension</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vscode/development.html">Development features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vscode/sim_debug.html">Simulation debug features</a></li>
 </ul>
-</li>
+<p class="caption" role="heading"><span class="caption-text">Language server</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lsp/standard_lsp.html">Supported standard LSP commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lsp/custom_lsp.html">Custom Language Server commands</a></li>
 </ul>
 
 </div>
@@ -230,7 +232,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/lsp/presentation.rst.txt" title="View this page">
+  <a class="muted-link" href="../_sources/introduction/setup.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -244,38 +246,91 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="diplomat-language-server">
-<h1>Diplomat Language Server<a class="headerlink" href="#diplomat-language-server" title="Permalink to this heading">¶</a></h1>
-<p>The Diplomat language server is a full C++ implementation of the <em>Language Server Protocol</em> (LSP) targetting SystemVerilog.
-It relies on <a class="reference external" href="https://github.com/MikePopoloski/slang">slang</a> to perform code analysis and elaboration.</p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Content:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="standard_lsp.html">Supported standard LSP commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#initialize-request"><code class="docutils literal notranslate"><span class="pre">initialize</span></code> request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#initialized-notification"><code class="docutils literal notranslate"><span class="pre">initialized</span></code> notification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#exit-notification"><code class="docutils literal notranslate"><span class="pre">exit</span></code> notification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#shutdown-request"><code class="docutils literal notranslate"><span class="pre">shutdown</span></code> request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#textdocument-didopen-notification"><code class="docutils literal notranslate"><span class="pre">textDocument/didOpen</span></code> notification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#textdocument-didsave-notification"><code class="docutils literal notranslate"><span class="pre">textDocument/didSave</span></code> notification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#textdocument-definition-request"><code class="docutils literal notranslate"><span class="pre">textDocument/definition</span></code> request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#textdocument-references-request"><code class="docutils literal notranslate"><span class="pre">textDocument/references</span></code> request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#textdocument-rename-request"><code class="docutils literal notranslate"><span class="pre">textDocument/rename</span></code> request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#textdocument-formatting-request"><code class="docutils literal notranslate"><span class="pre">textDocument/formatting</span></code> request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#workspace-didchangeworkspacefolders-notification"><code class="docutils literal notranslate"><span class="pre">workspace/didChangeWorkspaceFolders</span></code> notification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#textdocument-publishdiagnostics-notification"><code class="docutils literal notranslate"><span class="pre">textDocument/publishDiagnostics</span></code> notification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard_lsp.html#workspace-executecommand-notification"><code class="docutils literal notranslate"><span class="pre">workspace/executeCommand</span></code> notification</a></li>
+          <section id="setup-diplomat">
+<h1>Setup Diplomat<a class="headerlink" href="#setup-diplomat" title="Permalink to this heading">¶</a></h1>
+<section id="getting-a-working-copy-of-diplomat">
+<h2>Getting a working copy of Diplomat<a class="headerlink" href="#getting-a-working-copy-of-diplomat" title="Permalink to this heading">¶</a></h2>
+<p>In order to work with Diplomat, it is necessary to have both:</p>
+<ul class="simple">
+<li><p>The VS Code extension</p></li>
+<li><p>The language server</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="custom_lsp.html">Custom Language Server commands</a></li>
-</ul>
+<p>Both of those can be either build from sources or found compiled on github.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The server is developped and built on modern Linux (Ubuntu 22.04).
+Therefore the more old linux may not support running the pre-built server out of the box.</p>
+<p>The server has been seen working, after a fairly tedious setup, on RedHat (RHEL) 7.</p>
 </div>
+<p>The VS Code extension should work regardless of the system VS Code is running on.</p>
+<section id="pre-built-binaries">
+<h3>Pre-built binaries<a class="headerlink" href="#pre-built-binaries" title="Permalink to this heading">¶</a></h3>
+<p>Pre-built binaries are produced each time a relevant version is pushed to github. They can be found in:
+* <a class="reference external" href="https://github.com/suzizecat/diplomat-vscode/releases">https://github.com/suzizecat/diplomat-vscode/releases</a> For the VS Code extension.
+* <a class="reference external" href="https://github.com/suzizecat/slang-lsp-tools/releases">https://github.com/suzizecat/slang-lsp-tools/releases</a> For the language server</p>
+<p>At this point in time, the dev release may be used as safely as the “real” releases.</p>
+<p>Be aware that the backward compatibility is <strong>not</strong> enforced across versions yet.
+While attention is placed on not removing support and trying to keep this backward compatibility, there is no
+actual API freeze yet.</p>
+</section>
+<section id="build-from-source">
+<h3>Build from source<a class="headerlink" href="#build-from-source" title="Permalink to this heading">¶</a></h3>
+<section id="vs-code-extension">
+<h4>VS Code extension<a class="headerlink" href="#vs-code-extension" title="Permalink to this heading">¶</a></h4>
+<p>Download the sources from <a class="reference external" href="https://github.com/suzizecat/diplomat-vscode/">https://github.com/suzizecat/diplomat-vscode/</a></p>
+<p>The VS Code extension requires a node.js distribution. The rest of the build should be self contained.
+You only requires a VS Code that handle Language Server Protocol 3.17</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:suzizecat/diplomat-vscode.git
+cd diplomat-vscode
+npm install
+npm run publish
+code --install-extension diplomat-host*.vsix
+</pre></div>
+</div>
+<p>The extension will start once you open a SystemVerilog file in VS Code.</p>
+</section>
+<section id="language-server">
+<h4>Language server<a class="headerlink" href="#language-server" title="Permalink to this heading">¶</a></h4>
+<p>In order to build the language server you will require:</p>
+<ul class="simple">
+<li><p>Git</p></li>
+<li><p>CMake 3.15 or newer</p></li>
+<li><p>A compiler able to handle C++20 (In my case, GCC 11 or 12)</p></li>
+<li><p>A compiler system such as Gnu Make</p></li>
+</ul>
+<p>You may optionally use the <code class="docutils literal notranslate"><span class="pre">mold</span></code> linker.</p>
+<p>External dependencies should be packaged using the provided CMakeList, so no external library should be required.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:suzizecat/slang-lsp-tools.git
+cd slang-lsp-tools
+cmake -DCMAKE_BUILD_TYPE=Release -B./build
+cmake --build ./build --target slang-lsp -j `nproc`
+</pre></div>
+</div>
+<p>The result file should be <code class="docutils literal notranslate"><span class="pre">./build/slang-lsp</span></code>.</p>
+<p>You may check that everything works fine by running the server:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user:~/$ </span>./build/slang-lsp<span class="w"> </span>--tcp
+<span class="go">[2024-08-04 15:15:09.862] [info] Await client on port 8080...</span>
+</pre></div>
+</div>
+<p>To exit the server, simply issue <code class="docutils literal notranslate"><span class="pre">Ctrl-C</span></code>.</p>
+<p>If you wish to use <code class="docutils literal notranslate"><span class="pre">mold</span></code> as a linker, please use <code class="docutils literal notranslate"><span class="pre">-DDIPLOMAT_USE_MOLD=ON</span></code> on the configuration step.
+Also, you may specify the version shown when running <code class="docutils literal notranslate"><span class="pre">slang-lsp</span> <span class="pre">--version</span></code> by using (at configuration stage) <code class="docutils literal notranslate"><span class="pre">DDIPLOMAT_VERSION=&lt;the</span> <span class="pre">version&gt;</span></code>.
+To get the default behavior, use  <code class="docutils literal notranslate"><span class="pre">DDIPLOMAT_VERSION=auto</span></code> when reconfiguring, or omit the option on a clean configuration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The configuration step will pull all dependencies from github, which may take some time.</p>
+<p>It is recomended to re-run <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">-DCMAKE_BUILD_TYPE=Release</span> <span class="pre">-B./build</span></code>  each time a new version is pulled,
+to ensure that any change in CMakeList or <code class="docutils literal notranslate"><span class="pre">third-party.cmake</span></code> will be taken into account.</p>
+</div>
+</section>
+</section>
+</section>
 </section>
 
         </article>
@@ -283,23 +338,23 @@ It relies on <a class="reference external" href="https://github.com/MikePopolosk
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="standard_lsp.html">
+          <a class="next-page" href="../vscode/development.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Supported standard LSP commands</div>
+                <div class="title">Development features</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../vscode/sim_debug.html">
+          <a class="prev-page" href="intro.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Simulation debug features</div>
+                <div class="title">Introduction</div>
                 
               </div>
             </a>
@@ -321,13 +376,40 @@ It relies on <a class="reference external" href="https://github.com/MikePopolosk
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Setup Diplomat</a><ul>
+<li><a class="reference internal" href="#getting-a-working-copy-of-diplomat">Getting a working copy of Diplomat</a><ul>
+<li><a class="reference internal" href="#pre-built-binaries">Pre-built binaries</a></li>
+<li><a class="reference internal" href="#build-from-source">Build from source</a><ul>
+<li><a class="reference internal" href="#vs-code-extension">VS Code extension</a></li>
+<li><a class="reference internal" href="#language-server">Language server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=3dadcae2"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=87f11076"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>

@@ -6,7 +6,15 @@ Open waveform in viewer
 
 For all supported waveform type, Diplomat provides a shortcut to directly open the waveform in the appropriate external viewer.
 
-.. figure:: /img/open_wave.png
+.. figure:: /img/open_wave_dark.png
+    :figclass: only-dark
+    :align: center
+    :scale: 75%
+
+    Open waveform menu
+
+.. figure:: /img/open_wave_light.png
+    :figclass: only-light
     :align: center
     :scale: 75%
 
@@ -19,7 +27,14 @@ Hierarchy explorer
 Once the workspace has been properly analyzed, the hierarchy explorer will show the hierarchy tree of the workspace.
 If no top-level file is selected, all potential top-level modules will be shown in the tree.
 
-.. figure:: /img/hier_explorer.png
+.. figure:: /img/hier_explorer_dark.png
+    :figclass: only-dark
+    :align: center
+
+    Hierarchy explorer view
+
+.. figure:: /img/hier_explorer_light.png
+    :figclass: only-light
     :align: center
 
     Hierarchy explorer view
@@ -41,7 +56,14 @@ Once those conditions are met, the editor will display the simulation values for
 Changing the position of the marker will update the values in the editor.
 The traces does not need to be displayed in the viewer for the values to be retrieved.
 
-.. figure:: /img/inline_values.png
+.. figure:: /img/inline_values_dark.png
+    :figclass: only-dark
+    :align: center
+
+    Editor with inline value display enabled
+
+.. figure:: /img/inline_values_light.png
+    :figclass: only-light
     :align: center
 
     Editor with inline value display enabled

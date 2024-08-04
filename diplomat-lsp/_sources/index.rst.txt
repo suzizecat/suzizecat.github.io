@@ -7,10 +7,24 @@ Diplomat documentation
 ======================
 
 .. toctree::
-   :caption: Contents:
+   :caption: Introduction
 
-   vscode/presentation
-   lsp/presentation
+   introduction/intro
+   introduction/setup
+
+
+
+.. toctree::
+   :caption: VS Code extension
+
+   vscode/development
+   vscode/sim_debug
+
+.. toctree::
+   :caption: Language server  
+
+   lsp/standard_lsp
+   lsp/custom_lsp
 
 
 Indices and tables
