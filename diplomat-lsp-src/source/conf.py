@@ -17,12 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Diplomat LSP'
+project = 'Diplomat'
 copyright = '2024, Julien FAUCHER'
 author = 'Julien FAUCHER'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.6'
+release = '0.1.1'
 
 
 # -- General configuration ---------------------------------------------------

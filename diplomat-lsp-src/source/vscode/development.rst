@@ -11,8 +11,15 @@ The supported language features are listed `in the slang documentation <https://
 
 The errors and warnings reported by slang will be returned to the editor and shown with squiggle lines in the editor and in the *Problems* view of VS Code.
 
-.. figure:: /img/error_reporting.png
+.. figure:: /img/error_reporting_dark.png
     :align: center
+    :figclass: only-dark
+
+    Editor with reported errors
+
+.. figure:: /img/error_reporting_light.png
+    :align: center
+    :figclass: only-light
 
     Editor with reported errors
 
@@ -45,6 +52,18 @@ These functions will allow to:
 
 Those actions are performed either through right-click menu in the editor, or by ``Ctrl+Click`` on any variable name in the editor.
 
+.. figure:: /img/goto_dark.png
+    :figclass: only-dark
+    :align: center
+
+    Go-to action triggered on the definition of a net.
+
+.. figure:: /img/goto_light.png
+    :figclass: only-light
+    :align: center
+
+    Go-to action triggered on the definition of a net.
+
 .. tip:: 
     * ``Ctrl+Click`` on a reference will jump to its declaration.
     * ``Ctrl+Click`` on a definition will jump to its reference (if only one exists) or lookup all the references.
@@ -55,6 +74,19 @@ Symbol renaming
 Using VS Code UI, the extension is able to performs symbol renaming.
 In editor, select a net and hit ``F2`` to trigger this feature.
 All reference and the definition of the symbol will be renamed.
+
+.. figure:: /img/rename_dark.png
+    :align: center
+    :figclass: only-dark
+
+    Rename operation
+
+
+.. figure:: /img/rename_light.png
+    :align: center
+    :figclass: only-light
+
+    Rename operation
 
 This is **not** a "Search and replace" function, as the lookup is done on symbols extracted from the elaborated design, while being aware of the context.
 Therefore, renaming a net in a module will not affect nets from another module.
