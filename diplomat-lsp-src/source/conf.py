@@ -49,6 +49,12 @@ exclude_patterns = []
 #
 html_theme = 'furo'
 
+html_theme_options = {
+    "source_repository": "https://github.com/suzizecat/suzizecat.github.io",
+    "source_branch": "master",
+    "source_directory": "diplomat-lsp-src/source",
+}
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
