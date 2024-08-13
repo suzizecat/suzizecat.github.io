@@ -18,6 +18,7 @@ Diplomat documentation
    :caption: VS Code extension
 
    vscode/development
+   vscode/test
    vscode/sim_debug
 
 .. toctree::
