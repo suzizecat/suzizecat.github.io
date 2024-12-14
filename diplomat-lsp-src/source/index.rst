@@ -11,6 +11,7 @@ Diplomat documentation
 
    introduction/intro
    introduction/setup
+   introduction/configuration
 
 
 
