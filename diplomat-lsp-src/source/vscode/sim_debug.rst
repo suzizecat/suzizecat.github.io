@@ -69,4 +69,14 @@ The traces does not need to be displayed in the viewer for the values to be retr
     Editor with inline value display enabled
 
 .. note:: As the value lookup is only meaninful in the context of the hierarchy, 
-    please navigate your design using the Hierarchy explorer while usin gthe inline value display.
+    please navigate your design using the Hierarchy explorer while using the inline value display.
+
+
+Adding signal to the waveform
+-----------------------------
+
+When a point in the hierarchy is selected and the waveform viewer is opened, it is possible to add a signal
+directly from the editor to the waveform viewer.
+To do so, place your cursor to the desired symbol, right-click in the editor and select ``Add symbol to waveform`` .
+
+.. note:: The waveform viewer must be opened for this option to show up.
