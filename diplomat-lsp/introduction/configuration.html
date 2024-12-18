@@ -301,11 +301,44 @@ This is done by right-clicking on the file or folder to exclude and select <code
 <h3>Saving and loading the configuration<a class="headerlink" href="#saving-and-loading-the-configuration" title="Permalink to this heading">¶</a></h3>
 <p>Once you configured your workspace, you should save this configuration using the <code class="docutils literal notranslate"><span class="pre">Diplomat:</span> <span class="pre">Save</span> <span class="pre">the</span> <span class="pre">workspace</span> <span class="pre">configuration</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">server</span></code> command.
 This will save all the workspace configuration into a json file in a location determined by VSCode.</p>
-<p>This configuration file should not have to be edited manually as it reflects the result of user commands.
-However, the command <code class="docutils literal notranslate"><span class="pre">Diplomat:</span> <span class="pre">Open</span> <span class="pre">config</span> <span class="pre">file</span></code> will open this file for edition in VSCode.</p>
+<p>This configuration file should not have to be edited manually as it reflects the result of user commands (except for include paths, see below).
+However, the command <code class="docutils literal notranslate"><span class="pre">Diplomat:</span> <span class="pre">Open</span> <span class="pre">config</span> <span class="pre">file</span></code> will open this file for edition in VSCode.
+As it is a fully fledged JSON file, you may format it to facilitate the edition.</p>
 <p>Normally, the settings are loaded upon starting the language server.
 If the loading fails upon startup (which may happen) or if the file has been manually updated, the settings may be reloaded from the file with the command
 <code class="docutils literal notranslate"><span class="pre">Diplomat:</span> <span class="pre">Load</span> <span class="pre">the</span> <span class="pre">workspace</span> <span class="pre">configuration</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">server</span></code></p>
+</section>
+<section id="adding-include-paths">
+<h3>Adding include paths<a class="headerlink" href="#adding-include-paths" title="Permalink to this heading">¶</a></h3>
+<p>There is no GUI to add include paths to your setup.
+In order to do so, you have to manually edit the configuration file and add your paths to either the <code class="docutils literal notranslate"><span class="pre">includes</span> <span class="pre">&gt;</span> <span class="pre">system</span></code> or the <code class="docutils literal notranslate"><span class="pre">includes</span> <span class="pre">&gt;</span> <span class="pre">user</span></code> sections.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Extract of the configuration file</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="cm">/* ... */</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&quot;includes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="c1">// For files to include through `include &lt;stuff&gt;</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="nt">&quot;system&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 6</span><span class="w">            </span><span class="s2">&quot;/absolute/to/system&quot;</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="p">],</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// For files to include through `include &quot;stuff&quot;</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">10</span><span class="w">            </span><span class="s2">&quot;/absolute/to/user&quot;</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">            </span><span class="s2">&quot;/absolute/path2&quot;</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">            </span><span class="s2">&quot;relative/path&quot;</span>
+<span class="linenos">13</span><span class="w">        </span><span class="p">]</span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">15</span><span class="w">    </span><span class="cm">/* ... */</span>
+<span class="linenos">16</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="configuration-file-format">
+<h3>Configuration file format<a class="headerlink" href="#configuration-file-format" title="Permalink to this heading">¶</a></h3>
+<p>The configuration file format is defined by the server in the file <code class="docutils literal notranslate"><span class="pre">lsp-server/diplomat/include/diplomat_lsp_ws_settings.hpp</span></code> which
+defines the workspace properties that are used by the server.</p>
+<p>The file is a serialized version of the <code class="docutils literal notranslate"><span class="pre">DiplomatLSPWorkspaceSettings</span></code> structure.</p>
 </section>
 </section>
 </section>
@@ -370,6 +403,8 @@ If the loading fails upon startup (which may happen) or if the file has been man
 <li><a class="reference internal" href="#selecting-the-top-level">Selecting the top-level</a></li>
 <li><a class="reference internal" href="#excluding-files">Excluding files</a></li>
 <li><a class="reference internal" href="#saving-and-loading-the-configuration">Saving and loading the configuration</a></li>
+<li><a class="reference internal" href="#adding-include-paths">Adding include paths</a></li>
+<li><a class="reference internal" href="#configuration-file-format">Configuration file format</a></li>
 </ul>
 </li>
 </ul>
