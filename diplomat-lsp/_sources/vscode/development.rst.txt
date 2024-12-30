@@ -40,6 +40,36 @@ Only the following warnings are ignored:
 .. note:: When a top level module is specified, the design is elaborated before reporting the errors and warning. 
     Thus effectively ommiting diagnostics from file that are not used in the design.
 
+Completion suggestions
+----------------------
+
+*Available since Diplomat Server 0.3.0*
+
+
+Using the language server analysis capabilities, Diplomat provide autocompletion suggestion to VSCode.
+Those completion propositions will be made available on-the-fly when typing code in a file that is processed by the language server.
+
+A file is available for autocompletion as long as :
+ * It defines at least one element used in the current projet (it is present in the design hierarchy)
+ * It is not excluded from diplomat paths
+ * The index has been built (the parsing and analysis of the file went well).
+
+The completion will propose any processed symbol **which has been declared before the cursor position** and which is visible in the current scope.
+This is done in order to avoid "used before declaration" errors.
+In example, in the following code, using completion on the highlighted line would only show ``foo`` but not ``bar``
+
+.. code-block:: sv
+    :linenos:
+    :emphasize-lines: 2
+
+    logic foo;
+    assign // Trigger here
+    logic bar;
+
+By default, the completion is triggered by typing almost anything. 
+It may also be triggered manually by using the ``Ctrl + Space`` shortcut (default binding).  
+
+
 Code navigation
 --------------------
 

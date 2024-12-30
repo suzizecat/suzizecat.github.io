@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Setup Diplomat" href="setup.html" /><link rel="prev" title="Diplomat documentation" href="../index.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.07.18 -->
-        <title>Introduction - Diplomat 0.2.0 documentation</title>
+        <title>Introduction - Diplomat 0.3.0-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=613ab9ff" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Diplomat 0.2.0 documentation</div></a>
+      <a href="../index.html"><div class="brand">Diplomat 0.3.0-dev documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -190,7 +190,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">Diplomat 0.2.0 documentation</span>
+  <span class="sidebar-brand-text">Diplomat 0.3.0-dev documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -260,6 +260,16 @@
         <article role="main" id="furo-main-content">
           <section id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h1>
+<p>Diplomat is a bundle of tools used to ease the development and debugging of SystemVerilog designs.
+While its aim is to be as complete and useful as possible in a seamless and straightforward way,
+it cannot be guaranteed to work without bugs or issues.</p>
+<dl class="simple">
+<dt>If you found bugs, usability problems or missing features, please drop a word by raising an issue against the element that seems to cause an issue:</dt><dd><ul class="simple">
+<li><p>The <a class="reference external" href="https://github.com/suzizecat/diplomat-vscode/issues">VSCode extension</a> is reponsible for the GUI and everything not related to code analysis proper.</p></li>
+<li><p>The <a class="reference external" href="https://github.com/suzizecat/slang-lsp-tools/issues">Language server</a> is reponsible for providing informations about the design to the extension.</p></li>
+</ul>
+</dd>
+</dl>
 <section id="vs-code-extension">
 <h2>VS Code extension<a class="headerlink" href="#vs-code-extension" title="Permalink to this heading">¶</a></h2>
 <p>The Diplomat VS Code extension (<em>Diplomat Client</em>, sometimes refered as <em>Diplomat Host</em>)
@@ -268,6 +278,7 @@ is the provided client for interfacing with Diplomat Server.</p>
 <dt>It features:</dt><dd><ul class="simple">
 <li><p>Workspace analysis using the <a class="reference external" href="https://github.com/MikePopoloski/slang">slang</a> open source SystemVerilog compiler.</p></li>
 <li><p>Error checking and elaboration-level linting</p></li>
+<li><p>Scope-aware autocompletion suggestions</p></li>
 <li><p>Jump to definition/reference across files</p></li>
 <li><p>Syntax coloration</p></li>
 <li><p>Rename symbol</p></li>
@@ -276,8 +287,8 @@ is the provided client for interfacing with Diplomat Server.</p>
 </dd>
 </dl>
 </section>
-<section id="language-server">
-<h2>Language server<a class="headerlink" href="#language-server" title="Permalink to this heading">¶</a></h2>
+<section id="id1">
+<h2>Language server<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>The Diplomat language server is a full C++ implementation of the <em>Language Server Protocol</em> (LSP) targetting SystemVerilog.
 It relies on <a class="reference external" href="https://github.com/MikePopoloski/slang">slang</a> to perform code analysis and elaboration.</p>
 </section>
@@ -340,7 +351,7 @@ It relies on <a class="reference external" href="https://github.com/MikePopolosk
             <ul>
 <li><a class="reference internal" href="#">Introduction</a><ul>
 <li><a class="reference internal" href="#vs-code-extension">VS Code extension</a></li>
-<li><a class="reference internal" href="#language-server">Language server</a></li>
+<li><a class="reference internal" href="#id1">Language server</a></li>
 </ul>
 </li>
 </ul>
@@ -352,7 +363,7 @@ It relies on <a class="reference external" href="https://github.com/MikePopolosk
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b1f64a84"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=19b391fa"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>

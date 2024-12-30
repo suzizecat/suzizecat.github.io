@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Testing features" href="test.html" /><link rel="prev" title="Configuring Diplomat" href="../introduction/configuration.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.07.18 -->
-        <title>Development features - Diplomat 0.2.0 documentation</title>
+        <title>Development features - Diplomat 0.3.0-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=613ab9ff" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Diplomat 0.2.0 documentation</div></a>
+      <a href="../index.html"><div class="brand">Diplomat 0.3.0-dev documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -190,7 +190,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">Diplomat 0.2.0 documentation</span>
+  <span class="sidebar-brand-text">Diplomat 0.3.0-dev documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -296,6 +296,30 @@ Particularly annoying when working with a library of components and not really r
 <p>When a top level module is specified, the design is elaborated before reporting the errors and warning.
 Thus effectively ommiting diagnostics from file that are not used in the design.</p>
 </div>
+</section>
+<section id="completion-suggestions">
+<h2>Completion suggestions<a class="headerlink" href="#completion-suggestions" title="Permalink to this heading">¶</a></h2>
+<p><em>Available since Diplomat Server 0.3.0</em></p>
+<p>Using the language server analysis capabilities, Diplomat provide autocompletion suggestion to VSCode.
+Those completion propositions will be made available on-the-fly when typing code in a file that is processed by the language server.</p>
+<dl class="simple">
+<dt>A file is available for autocompletion as long as :</dt><dd><ul class="simple">
+<li><p>It defines at least one element used in the current projet (it is present in the design hierarchy)</p></li>
+<li><p>It is not excluded from diplomat paths</p></li>
+<li><p>The index has been built (the parsing and analysis of the file went well).</p></li>
+</ul>
+</dd>
+</dl>
+<p>The completion will propose any processed symbol <strong>which has been declared before the cursor position</strong> and which is visible in the current scope.
+This is done in order to avoid “used before declaration” errors.
+In example, in the following code, using completion on the highlighted line would only show <code class="docutils literal notranslate"><span class="pre">foo</span></code> but not <code class="docutils literal notranslate"><span class="pre">bar</span></code></p>
+<div class="highlight-sv notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">logic</span><span class="w"> </span><span class="n">foo</span><span class="p">;</span>
+<span class="hll"><span class="linenos">2</span><span class="k">assign</span><span class="w"> </span><span class="c1">// Trigger here</span>
+</span><span class="linenos">3</span><span class="kt">logic</span><span class="w"> </span><span class="n">bar</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>By default, the completion is triggered by typing almost anything.
+It may also be triggered manually by using the <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Space</span></code> shortcut (default binding).</p>
 </section>
 <section id="code-navigation">
 <h2>Code navigation<a class="headerlink" href="#code-navigation" title="Permalink to this heading">¶</a></h2>
@@ -419,6 +443,7 @@ VS Code will then present a list of modules detected across the workspace, that 
             <ul>
 <li><a class="reference internal" href="#">Development features</a><ul>
 <li><a class="reference internal" href="#code-analysis">Code analysis</a></li>
+<li><a class="reference internal" href="#completion-suggestions">Completion suggestions</a></li>
 <li><a class="reference internal" href="#code-navigation">Code navigation</a></li>
 <li><a class="reference internal" href="#symbol-renaming">Symbol renaming</a></li>
 <li><a class="reference internal" href="#module-instanciaton">Module instanciaton</a></li>
@@ -433,7 +458,7 @@ VS Code will then present a list of modules detected across the workspace, that 
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b1f64a84"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=19b391fa"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
