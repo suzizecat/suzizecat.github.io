@@ -1,7 +1,3 @@
-.. Diplomat Documentation documentation master file, created by
-   sphinx-quickstart on Tue Jul 30 21:18:48 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 Diplomat documentation
 ======================
@@ -21,6 +17,7 @@ Diplomat documentation
    vscode/development
    vscode/test
    vscode/sim_debug
+   vscode/contrib_points
 
 .. toctree::
    :caption: Language server  
